@@ -1,11 +1,17 @@
+using API_RESTful.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+// AGREGA TODOS LOS CONTROLADORES CREADOS:
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// DOCUMENTACION DE SWAGGER PARA TESTEAR LA API:
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// INYECCION DE LA DB:
+builder.Services.AddDbContext<MyDBcontext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Cadena_Conexion")));
 
 var app = builder.Build();
 
