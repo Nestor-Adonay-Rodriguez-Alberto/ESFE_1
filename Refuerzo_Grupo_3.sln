@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_RESTful", "API_RESTful\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transferencia_Datos", "Transferencia_Datos\Transferencia_Datos.csproj", "{B6F792FB-14EE-4391-A21E-8C425EF39078}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_MVC", "UI_MVC\UI_MVC.csproj", "{509B765F-1A34-44C8-AE78-AD311D83D20E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B6F792FB-14EE-4391-A21E-8C425EF39078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6F792FB-14EE-4391-A21E-8C425EF39078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6F792FB-14EE-4391-A21E-8C425EF39078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{509B765F-1A34-44C8-AE78-AD311D83D20E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{509B765F-1A34-44C8-AE78-AD311D83D20E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{509B765F-1A34-44C8-AE78-AD311D83D20E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{509B765F-1A34-44C8-AE78-AD311D83D20E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
