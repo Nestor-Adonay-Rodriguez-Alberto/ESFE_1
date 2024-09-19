@@ -14,9 +14,9 @@ namespace Transferencia_Datos.Empleado_DTO
         [Required(ErrorMessage = "Ingrese El Nombre Del Empleado.")]
         public string Nombre { get; set; }
 
-
+         
         [Required(ErrorMessage = "Salario Mensual.")]
-        public double Salaraio { get; set; }
+        public double Salario { get; set; }
 
 
         [Required(ErrorMessage = "Ingrese La Fecha De Nacimiento.")]

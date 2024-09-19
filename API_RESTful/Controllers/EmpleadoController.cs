@@ -1,11 +1,7 @@
 ﻿using API_RESTful.Models;
 using Microsoft.AspNetCore.Mvc;
 using Transferencia_Datos.Empleado_DTO;
-using API_RESTful.Models;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Transferencia_Datos.Empleado_DTO;
-using static Transferencia_Datos.Empleado_DTO.Registrados_Empleado_DTO;
 
 namespace API_RESTful.Controllers
 {
@@ -45,7 +41,7 @@ namespace API_RESTful.Controllers
                 {
                     IdEmpleado = empleado.IdEmpleado,
                     Nombre = empleado.Nombre,
-                    Salaraio = empleado.Salaraio,
+                    Salario = empleado.Salario,
                     FechaNacimiento = empleado.FechaNacimiento,
                     Email = empleado.Email,
                     Telefono = empleado.Telefono
@@ -71,10 +67,10 @@ namespace API_RESTful.Controllers
                 {
                     IdEmpleado = Objeto_Obtenido.IdEmpleado,
                     Nombre = Objeto_Obtenido.Nombre,
-                    Salaraio = Objeto_Obtenido.Salaraio,
+                    Salario = Objeto_Obtenido.Salario,
                     FechaNacimiento = Objeto_Obtenido.FechaNacimiento,
                     Email = Objeto_Obtenido.Email,
-                    Telefono = empleado.Telefono
+                    Telefono = Objeto_Obtenido.Telefono
                 };
 
                 return Ok(Registro_Obtenido);
@@ -103,10 +99,10 @@ namespace API_RESTful.Controllers
             Empleado empleado = new Empleado
             {
                 Nombre = crear_Empleado_DTO.Nombre,
-                Salaraio = crear_Empleado_DTO.Salaraio,
+                Salario = crear_Empleado_DTO.Salario,
                 FechaNacimiento = crear_Empleado_DTO.FechaNacimiento,
                 Email = crear_Empleado_DTO.Email,
-                Telefono = empleado.Telefono
+                Telefono = crear_Empleado_DTO.Telefono
             };
 
             _MyDBcontext.Add(empleado);
@@ -126,10 +122,10 @@ namespace API_RESTful.Controllers
             if (Objeto_Obtenido != null)
             {
                 Objeto_Obtenido.Nombre = editar_Empleado_DTO.Nombre;
-                Objeto_Obtenido.Salaraio = editar_Empleado_DTO.Salaraio;
+                Objeto_Obtenido.Salario = editar_Empleado_DTO.Salario;
                 Objeto_Obtenido.FechaNacimiento = editar_Empleado_DTO.FechaNacimiento;
                 Objeto_Obtenido.Email = editar_Empleado_DTO.Email;
-                Objeto_Obtenido.Telefono = editar_Empleado_DTO.Telefono
+                Objeto_Obtenido.Telefono = editar_Empleado_DTO.Telefono;
                 // Actualizamos:
                 _MyDBcontext.Update(Objeto_Obtenido);
                 await _MyDBcontext.SaveChangesAsync();
@@ -164,5 +160,7 @@ namespace API_RESTful.Controllers
             }
 
         }
+
+
     }
 }

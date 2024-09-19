@@ -13,11 +13,11 @@ namespace Transferencia_Datos.Empleado_DTO
 
         public string Nombre { get; set; }
 
-        public double Salaraio { get; set; }
+        public double Salario { get; set; }
 
         public DateTime FechaNacimiento { get; set; }
 
-        public string Email { get; set; }
+        public string Email { get; set; } 
 
         public string Telefono { get; set; }
 

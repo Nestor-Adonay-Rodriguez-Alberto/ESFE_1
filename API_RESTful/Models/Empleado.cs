@@ -17,13 +17,13 @@ namespace API_RESTful.Models
 
         [Required]
         [Column(TypeName = "decimal(18, 2)")]
-        public double Salaraio { get; set; }
+        public double Salario { get; set; }
 
 
         [Required]
         public DateTime FechaNacimiento { get; set; }
 
-
+         
         [Required]
         public string Email { get; set; }
 
